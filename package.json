@@ -40,7 +40,27 @@
       "All original levels",
       "Keyboard/mouse controls",
       "Save games"
-    ]
+    ],
+    "screenshots": {
+      "hero": "screenshots/hero.png",
+      "images": [
+        "screenshots/1-main.png",
+        "screenshots/2-feature.png"
+      ]
+    },
+    "downloads": {
+      "web": "https://zos-apps.github.io/doom"
+    },
+    "featured": true,
+    "tags": [
+      "games",
+      "fun",
+      "entertainment",
+      "doom"
+    ],
+    "releaseDate": "2024-12-28",
+    "support": "https://github.com/zos-apps/doom/issues",
+    "changelog": "https://github.com/zos-apps/doom/releases"
   },
   "scripts": {
     "build": "tsup",
