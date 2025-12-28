@@ -3,82 +3,92 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>👹 DOOM - zOS App</title>
+  <title>DOOM - Documentation</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
   <style>
-    :root { --bg: #0a0a0a; --fg: #fafafa; --accent: #3b82f6; --muted: #71717a; }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--fg); min-height: 100vh; display: flex; flex-direction: column; align-items: center; padding: 4rem 2rem; }
-    .container { max-width: 800px; width: 100%; }
-    .header { text-align: center; margin-bottom: 3rem; }
-    .icon { font-size: 5rem; margin-bottom: 1rem; }
-    h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 0.5rem; }
-    .description { color: var(--muted); font-size: 1.25rem; margin-bottom: 1rem; }
-    .badges { display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2rem; }
-    .badge { padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.875rem; font-weight: 500; }
-    .badge-version { background: var(--accent); }
-    .badge-category { background: #22c55e; }
-    .section { background: #18181b; border-radius: 1rem; padding: 2rem; margin-bottom: 1.5rem; }
-    .section h2 { font-size: 1.25rem; margin-bottom: 1rem; color: var(--accent); }
-    .section p, .section li { color: var(--muted); line-height: 1.75; }
-    .section ul { list-style: none; }
-    .section li::before { content: "→ "; color: var(--accent); }
-    code { background: #27272a; padding: 0.25rem 0.5rem; border-radius: 0.25rem; font-family: 'SF Mono', monospace; font-size: 0.875rem; }
-    pre { background: #27272a; padding: 1rem; border-radius: 0.5rem; overflow-x: auto; margin: 1rem 0; }
-    pre code { background: none; padding: 0; }
-    .links { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem; }
-    .links a { color: var(--accent); text-decoration: none; padding: 0.75rem 1.5rem; border: 1px solid var(--accent); border-radius: 0.5rem; transition: all 0.2s; }
-    .links a:hover { background: var(--accent); color: var(--bg); }
-    footer { margin-top: auto; padding-top: 3rem; color: var(--muted); font-size: 0.875rem; }
-    footer a { color: var(--accent); text-decoration: none; }
+    :root { --primary: #0071e3; }
+    .hero { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 4rem 0; text-align: center; }
+    .hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+    .icon { font-size: 4rem; margin-bottom: 1rem; }
+    .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
+    .feature { padding: 1.5rem; border-radius: 0.5rem; background: var(--card-background-color); }
+    .shortcuts { font-family: monospace; }
+    .badge { display: inline-block; padding: 0.25rem 0.5rem; border-radius: 0.25rem; background: var(--primary); color: white; font-size: 0.875rem; margin-right: 0.5rem; }
   </style>
 </head>
 <body>
-  <div class="container">
-    <header class="header">
-      <div class="icon">👹</div>
-      <h1>DOOM</h1>
-      <p class="description">Rip and tear, until it is done.</p>
-      <div class="badges">
-        <span class="badge badge-version">v1.0.0</span>
-        <span class="badge badge-category">games</span>
-      </div>
-    </header>
-
-    <section class="section">
-      <h2>Installation</h2>
-      <pre><code>npm install github:zos-apps/doom</code></pre>
-      <p>Or install via the <a href="https://zos-apps.github.io/app-store" style="color: var(--accent)">zOS App Store</a>.</p>
-    </section>
-
-    <section class="section">
-      <h2>Usage</h2>
-      <pre><code>import DOOM from '@zos-apps/doom';
-
-function App() {
-  return &lt;DOOM /&gt;;
-}</code></pre>
-    </section>
-
-    <section class="section">
+  <div class="hero">
+    <div class="icon">👹</div>
+    <h1>DOOM</h1>
+    <p>The legendary first-person shooter that defined a genre.</p>
+    <p>
+      <a href="https://github.com/zos-apps/doom" class="badge">GitHub</a>
+      <a href="https://www.npmjs.com/package/@zos-apps/doom" class="badge">npm</a>
+    </p>
+  </div>
+  
+  <main class="container">
+    <section>
       <h2>Features</h2>
+      <div class="features">
+        <article class="feature"><strong>✓</strong> Classic gameplay</article>
+        <article class="feature"><strong>✓</strong> All original levels</article>
+        <article class="feature"><strong>✓</strong> Keyboard/mouse controls</article>
+        <article class="feature"><strong>✓</strong> Save games</article>
+      </div>
+    </section>
+    
+    <section>
+      <h2>Installation</h2>
+      <h3>From App Store</h3>
+      <p>Open the <strong>App Store</strong> in zOS and search for "DOOM".</p>
+      <h3>Via npm</h3>
+      <pre><code>npm install @zos-apps/doom</code></pre>
+    </section>
+    
+    <section>
+      <h2>How to Use</h2>
       <ul>
-        <li>Native zOS window integration</li>
-        <li>Dark mode support</li>
-        
-        <li>Context menu actions</li>
-        <li>Menu bar integration</li>
+        <li>WASD to move</li>
+        <li>Mouse to aim</li>
+        <li>Click to shoot</li>
       </ul>
     </section>
+    
+    
+    <section>
+      <h2>Keyboard Shortcuts</h2>
+      <table>
+        <thead><tr><th>Shortcut</th><th>Action</th></tr></thead>
+        <tbody>
+          <tr><td class="shortcuts">WASD</td><td>Move</td></tr>
+          <tr><td class="shortcuts">Space</td><td>Use/Open</td></tr>
+          <tr><td class="shortcuts">1-7</td><td>Weapons</td></tr>
+          <tr><td class="shortcuts">Esc</td><td>Menu</td></tr>
+        </tbody>
+      </table>
+    </section>
+    
+    
+    <section>
+      <h2>Development</h2>
+      <pre><code># Install dependencies
+npm install
 
-    <div class="links">
-      <a href="https://github.com/zos-apps/doom">GitHub</a>
+# Start development
+npm run dev
+
+# Build for production
+npm run build</code></pre>
+    </section>
+  </main>
+  
+  <footer class="container">
+    <p style="text-align: center; margin: 2rem 0;">
+      Built with ❤️ by <a href="https://hanzo.ai">Hanzo AI</a> •
+      <a href="https://github.com/zos-apps/doom">Source</a> •
       <a href="https://github.com/zos-apps/doom/issues">Issues</a>
-      <a href="https://zos-apps.github.io/app-store">App Store</a>
-    </div>
-  </div>
-
-  <footer>
-    <p>MIT © <a href="https://hanzo.ai">Hanzo AI</a></p>
+    </p>
   </footer>
 </body>
 </html>

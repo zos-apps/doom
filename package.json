@@ -20,7 +20,27 @@
         "height": 600
       },
       "resizable": true
-    }
+    },
+    "about": "The legendary first-person shooter that defined a genre.",
+    "help": [
+      "WASD to move",
+      "Mouse to aim",
+      "Click to shoot"
+    ],
+    "docs": "https://zos-apps.github.io/doom",
+    "site": "https://github.com/zos-apps/doom",
+    "shortcuts": [
+      "WASD Move",
+      "Space Use/Open",
+      "1-7 Weapons",
+      "Esc Menu"
+    ],
+    "features": [
+      "Classic gameplay",
+      "All original levels",
+      "Keyboard/mouse controls",
+      "Save games"
+    ]
   },
   "scripts": {
     "build": "tsup",
@@ -53,5 +73,13 @@
     "doom",
     "macos",
     "desktop"
-  ]
+  ],
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/zos-apps"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
 }
