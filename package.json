@@ -1,5 +1,5 @@
 {
-  "name": "@anthropic/doom",
+  "name": "@zos-apps/doom",
   "version": "1.0.0",
   "type": "module",
   "main": "./dist/index.js",
@@ -11,9 +11,14 @@
     "icon": "👹",
     "category": "games",
     "description": "Rip and tear, until it is done.",
-    "permissions": ["storage.local"],
+    "permissions": [
+      "storage.local"
+    ],
     "window": {
-      "defaultSize": { "width": 800, "height": 600 },
+      "defaultSize": {
+        "width": 800,
+        "height": 600
+      },
       "resizable": true
     }
   },
@@ -30,5 +35,23 @@
     "@types/react-dom": "^18.3.0",
     "tsup": "^8.3.5",
     "typescript": "^5.7.2"
-  }
+  },
+  "description": "Rip and tear, until it is done.",
+  "homepage": "https://zos-apps.github.io/doom",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zos-apps/doom.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zos-apps/doom/issues"
+  },
+  "author": "Hanzo AI",
+  "license": "MIT",
+  "keywords": [
+    "zos",
+    "app",
+    "doom",
+    "macos",
+    "desktop"
+  ]
 }
