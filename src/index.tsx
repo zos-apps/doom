@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState, useCallback } from 'react';
+import { useEffect, useRef, useState, useCallback } from 'react';
 
 interface DoomProps {
   onClose: () => void;
@@ -39,7 +39,7 @@ const WALL_COLORS: Record<number, string> = {
   4: '#8B4513',
 };
 
-const Doom: React.FC<DoomProps> = ({ onClose }) => {
+const Doom: React.FC<DoomProps> = ({ onClose: _onClose }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [gameState, setGameState] = useState<'menu' | 'playing' | 'dead'>('menu');
   const [health, setHealth] = useState(100);
